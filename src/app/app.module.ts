@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import { ChronoComponent } from './components/chrono/chrono.component';
+import { TimerViewPipe } from './pipes/timer-view.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ChronoComponent,
+    TimerViewPipe
   ],
   imports: [
     BrowserModule,
