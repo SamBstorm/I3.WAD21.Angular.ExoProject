@@ -6,7 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimerViewPipe implements PipeTransform {
 
   transform(value: number): string {
-    return `${Math.floor(value/60)} minutes ${(value % 60 < 10)?'0'+(value%60):value%60} secondes`
+    let minutes = Math.floor(value/60);
+    let seconds = value % 60;
+    return `${(minutes < 10)?'0'+minutes: minutes} minutes ${( seconds < 10)?'0'+seconds:seconds} secondes`
   }
 
 }
